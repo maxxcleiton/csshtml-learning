@@ -1,0 +1,40 @@
+z-index: serve para escolher quem tem prioridade na sobreposição, no caso a classe .first foi 
+adicionado o z-index: 2; que é maior que a .second, a sobrepondo-o
+
+<style>
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .first {
+    z-index: 2;
+    background-color: red;
+    position: absolute;
+
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="first"></div>
+<div class="second"></div>
+
+margin: auto - centraliza um elemento
+
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+</style>
+<div></div>
+
