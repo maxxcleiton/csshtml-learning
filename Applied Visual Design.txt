@@ -38,3 +38,137 @@ margin: auto - centraliza um elemento
 </style>
 <div></div>
 
+element on hover - faz algo quando o mouse está sob o elemento
+por exemplo aqui embaixo, aplicando a regra :hover em div { }, faz o mesmo aumentar de tamanho
+pois o transform: scale() aumenta a escala, no caso em 1.1x
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  
+  div:hover {
+	transform: scale(1.1);
+  }
+
+
+</style>
+
+<div></div>
+
+
+transform property: skewX
+skewX vai alterar o elemento em si, no caso o X dele (horizontal)
+podendo alterar o ângulo em determinados graus (no caso 24)
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+
+aqui um exemplo de skewY, que altera o ângulo vertical do elemento
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #top {
+    background-color: red;
+    transform: skewY(-10deg);
+
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+how to create an moon using CSS
+aqui foi criado um elemento em formato de lua
+tive que mexer em box-shadow que altera a sombra, e em border radius para 50%
+que arredondou o elemento, em box shadow vem a seguinte sequência:
+offset-x, the offset-y, blur-radius to 0, spread-radius to 0, and color to blue
+<style>
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0px 0px blue;
+  }
+
+</style>
+<div class="center"></div>
+
+
+::before and ::after pseudo-elements
+::before - primeiro filho do elemento
+::after - último filho do elemento
+são dois pseudo-elementos que trabalham juntos, no caso aqui foi criado um coração rosa
+para funcionarem, tem de ter a propriedade "content" com uma string vazia ""
+<style>
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+  }
+  .heart::after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+</style>
+<div class="heart"></div>
+
