@@ -1,0 +1,13 @@
+Iniciando as aulas em JScript
+Olha só:
+
+declarar variáveis:
+	var
+	let
+	const
+
+	var pode ser problemático pois se eu criar determinada var, e depois outra modificando-a, o código segue
+obedecendo, podendo acontecer de eu criar uma variável de mesmo nome e não saber, e ela ter esse valor diferente
+	let resulta em erro se for duplicado, assim avisando-nos
+	const é constante, o valor dela não pode ser atribuido novamente
+padrão de usar const é const FAV_PET = "Cats"; (letra maiúscula e separda por _)
