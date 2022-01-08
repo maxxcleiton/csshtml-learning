@@ -172,3 +172,43 @@ para funcionarem, tem de ter a propriedade "content" com uma string vazia ""
 </style>
 <div class="heart"></div>
 
+
+hoje aprendendo a animar algo utlizando puro css
+bom para animar é necessário utilizar propriedades, que dirão o que a animação irá fazer,
+e as keyframes, que dirão o que acontece durante a animação
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow; <!-- aqui damoos nome e duração à animação -->
+    animation-duration: 4s;
+
+  }
+
+  @keyframes rainbow { <!-- aqui é o que acontecerádurante, no caso, quando começa (0%)
+a cor do fundo será azul, indo para verde, e finalizando em amarelo -->
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+
+
+</style>
+<div id="rect"></div>
+
+através do iteration count, escolhemos quantas vezes a animaçãpo se repetirá, podendo ser 
+infinite também
+
+animation-iteration-count: 3;
