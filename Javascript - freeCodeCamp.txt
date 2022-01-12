@@ -11,3 +11,37 @@ obedecendo, podendo acontecer de eu criar uma variável de mesmo nome e não sab
 	let resulta em erro se for duplicado, assim avisando-nos
 	const é constante, o valor dela não pode ser atribuido novamente
 padrão de usar const é const FAV_PET = "Cats"; (letra maiúscula e separda por _)
+
+- escapar sequencias em strings possui varios codigos:
+\' aspas simples
+\" aspas duplas
+\\ barra invertida
+\n nova linha
+\r retorno de carro (ainda não sei o que significa)
+\t tab (realmente aplica tab ao codigo, como visto no exemplo abaixo)
+\b limite de palavra (ainda não sei o que significa)
+\f quebra de página (ainda não sei o que significa)
+
+com a seguinte linha de código, ela gera o seguinte resultado
+
+const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+
+FirstLine
+	\SecondLine
+ThirdLine
+
+interessante né
+
+- concatenação
+
+const myStr = "This is the start. " + "This is the end.";
+
+preciso adicionar espaço dentro da string se necessário
+
+- como quebrar uma string em várias linhas, usando do +=
+
+let ourStr = "I come first. ";
+ourStr += "I come second.";
+
+- lembrar que isso faz total sentido pois o operador/atribuidor += adiciona 1 a
+variavel desejada, então nesse caso, adicionando uma string em outra
