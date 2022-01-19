@@ -45,3 +45,163 @@ ourStr += "I come second.";
 
 - lembrar que isso faz total sentido pois o operador/atribuidor += adiciona 1 a
 variavel desejada, então nesse caso, adicionando uma string em outra
+
+
+MULTI-DIMENSIONAL ARRAYS
+
+
+como funcionam?
+
+var arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+
+This is what it looks like in tabular form.
+
+Position|	0	1	2	3
+	0	1	4	7	10
+	1	2	5	8	11
+	2	3	6	9	12
+
+ADICIONANDO/REMOVENDO DADOS DE UMA ARRAY
+
+ADICIONANDO
+É possivel adicionar dados no final de uma array! utilizando a função push()
+.push() recebe um ou mais parâmetros e "empurra" eles no final do array.
+
+exemplo
+
+const arr1 = [1, 2, 3]; <- criei uma variavel array
+arr1.push(4); <-- agora a const arr1 tem o valor de [1, 2, 3, 4]
+
+
+REMOVENDO
+
+O ULTIMO DADO DE UMA ARRAY:
+Para remover dados de uma array, nós utilizamos da função .pop()
+
+const threeArr = [1, 4, 6];
+const oneDown = threeArr.pop();
+console.log(oneDown);
+console.log(threeArr);
+O primeiro console.log exibirá o valor 6 e o segundo exibirá o valor [1, 4].
+
+O PRIMEIRO DADO DE UMA ARRAY:
+.shift() o faz
+
+exemplo
+const ourArray = ["Stimpson", "J", ["cat"]];
+const removedFromOurArray = ourArray.shift();
+
+removedFromOurArray teria o valor da string Stimpson <-- pois pegou o primeiro dado
+ourArray teria o valor de ["J", ["cat"]]. <-- pois foi o que sobrou
+
+ADICIONANDO UM ELEMENTO NO INÍCIO DE UMA ARRAY COM .unshift
+
+exemplo
+const ourArray = ["Stimpson", "J", "cat"]; <-- aqui tudo bem
+ourArray.shift(); <-- aqui ele retirou o primeiro elemento ("Stimpson")
+ourArray.unshift("Happy"); <-- aqui ele adicionou como primeiro elemento o "Happy"
+
+resultado:
+Após o shift, ourArray teria o valor ["J","cat"].
+Após o unshift, ourArray teria o valor ["Happy","J","cat"].
+
+
+CRIANDO UMA LISTA EM UMA CONSTANTE ARRAY
+
+const myList = [
+  ["Max Cleiton", 23],
+  ["Michele Souza", 18],
+  ["Claudia Rejane", 48],
+  ["José Marcelo", 45],
+  ["Eddie da Silva", 21],
+  ["Kledyson khgds", 22],
+];
+
+console.log(myList)
+
+
+RESULTADO:
+[ [ 'Max Cleiton', 23 ],
+  [ 'Michele Souza', 18 ],
+  [ 'Claudia Rejane', 48 ],
+  [ 'José Marcelo', 45 ],
+  [ 'Eddie da Silva', 21 ],
+  [ 'Kledyson khgds', 22 ] ]
+
+
+FUNÇÕES
+
+Em JavaScript, nós podemos dividir nosso código em partes reutilizáveis chamadas de funções.
+
+exemplo
+function functionName() {
+  console.log("Hello World");
+}
+
+posso sempre invocar essa função ao usar seu nome seguido de parenteses, assim
+functionName();
+
+sendo assim, toda vez que eu utilizar essa chamada, no console será impressa a
+mensagem Hello World, pois é o código que se encontra entre as chaves
+
+exemplo2
+
+function reusableFunction () {
+  console.log("Hi World");
+}
+
+reusableFunction();
+
+resultado:
+Hi World
+
+PARÂMETROS EM FUNÇÕES
+
+vamos lá, parâmetros são variaveis dentro das funções
+podemos utilizar qualquer tipo de variavel (string, number, etc.) inside it
+
+exemplo
+function functionWithArgs(param1, param2) { <-- aqui temos a criação de uma função e com dois parametros
+  console.log(param1 + param2) <-- aqui eu defini que essa função toda vez que for chamada irá somar o param1 com o param2
+}
+
+functionWithArgs(1,2); <-- aqui eu chamei a função, atribuindo valores aleatórios, e o que o console faz? mostra a soma dos dois
+functionWithArgs(7,9);
+
+resultado
+3
+16
+
+
+RETORNAR UM VALOR DE UMA FUNÇÃO COM RETURN
+
+function timesFive(num) { <-- bom, vamos lá, aqui temos a função timesFive com um parâmetro de número
+  return num * 5; <-- aqui ele mete o return e multiplica por 5 o param. num
+}
+
+const result = timesFive(5) <- aqui criei uma var puxando a função timesFive, com o valor de 5
+
+console.log(result) <-- aqui ele retorna o novo valor (25)
+
+ESCOPO LOCAL E FUNÇÕES
+-Em JavaScript, escopo refere-se à visibilidade de variáveis.
+Variáveis que são definidas fora de um bloco de função tem o escopo Global.
+Isso significa que elas podem ser vistas em qualquer lugar no seu código JavaScript.
+
+variáveis declaradas dentro de uma função, possuem escopo local, então são visíveis 
+apenas dentro de uma função
+
+Aqui está uma função myTest com uma variável local chamada loc
+
+function myTest() {
+  const loc = "foo";
+  console.log(loc);
+}
+
+myTest();
+console.log(loc);
+
+A chamada da função myTest() vai exibir a string foo no console.
+A linha console.log(loc) vai lançar um erro, já que loc não foi definido 
+fora da função.
+
