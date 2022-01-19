@@ -211,4 +211,55 @@ a cor do fundo será azul, indo para verde, e finalizando em amarelo -->
 através do iteration count, escolhemos quantas vezes a animaçãpo se repetirá, podendo ser 
 infinite também
 
-animation-iteration-count: 3;
+animation-iteration-count: 3;---------
+
+accesskey=""
+adiciona-se a botões input, buttons, anchors
+
+como adicionar o foco ao alguem pressionar tab?
+tabindex="0"
+exemplo abaixo onde tornamos um paragraph em foco ao pressionar tab
+      <p tabindex="0">Instructions: Fill in ALL your information then click <b>Submit</b></p>
+
+o número em tabindex fala sobre a ordem de prioridade, começando em 1 e seguindo
+exemplo
+<div tabindex="1">I get keyboard focus, and I get it first!</div>
+<div tabindex="2">I get keyboard focus, and I get it second!</div>
+
+
+DESIGN RESPONSIVO::
+
+
+dá para aplicar uma rule (regra) para determinado elemento obedecer a uma ordem css
+@media (max-width: 100px) { /* CSS Rules */ }
+
+@media (max-height: 800px){
+  p {
+    font-size: 10px;
+  }
+}
+
+nesse caso aqui foi dito que quando a altura do dispositivo for menor ou igual a
+800px então o tamanho da parada (no caso o elemento p) deverá ser de 10px
+
+
+tornar uma imagem responsiva com css basta aplicar essas propriedades a uma imagem
+(que fica em style, podendo ser vinculada por meio de class (.responsive) ou id (#responsive)
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+max width 100% vai sempre deixar a largura nos 100% de qualquer dispositivo
+já height auto sempre obedecerá a proporção da imagem
+
+
+é recomendado para que a imagem fique com mais PPI que seja diminuída o tamanho dela
+de preferência para a metade da mesma
+
+exemplo
+<style>
+  img { height: 250px; width: 250px; }
+</style>
+<img src="coolPic500x500" alt="A most excellent picture">
